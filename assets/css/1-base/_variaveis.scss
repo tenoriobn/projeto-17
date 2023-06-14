@@ -1,0 +1,21 @@
+/* Colors */
+$darkBlue: #14171C;
+$blue: #043177;
+$blueJeans: #314870;
+$darkGrayishBlue: #666970;
+$grayishBlue: #797C83;
+$lightBlueGray: #A3A6AF;
+$lightGrayish: #EEFFFF;
+$veryLightGrayish: #F6FAFD;
+$orangeRed: #F55854;
+$white: #FFFFFF;
+
+/* Font */
+$plus: 'Plus Jakarta Sans', sans-serif;
+
+/* Mixins */
+@mixin font-styling($color, $font-size, $font-weight) {
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
