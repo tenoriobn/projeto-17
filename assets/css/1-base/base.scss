@@ -1,8 +1,14 @@
 @import './reset';
 @import './variaveis';
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+@import '../2-componentes/header';
 
 body {
     font-family: $plus;
-    @include font-styling(black, 1rem, 500)
+    @include font-styling($grayishBlue, 1rem, 500);
+    padding: 0 1rem;
+
+    @media screen and (min-width: 375px) {
+        padding: 0 1.375rem; 
+    }
 }

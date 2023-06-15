@@ -1,6 +1,6 @@
 # Frontend Mentor - notifications page
 
-![Design Preview for Notifications Page Coding Challenge](./design/desktop-preview.jpg)
+![Design Preview for Notifications Page Coding Challenge](./assets/img/preview/desktop-preview.jpg)
 
 **To do this challenge, you must have a basic understanding of HTML, CSS, and JavaScript.**
 

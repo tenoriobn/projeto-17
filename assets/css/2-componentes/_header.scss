@@ -1,0 +1,41 @@
+@import '../1-base/variaveis';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 1.5rem;
+
+    &__notifications {
+        display: flex;
+        align-items: center;
+        gap: .625rem;
+
+        &__title {
+            @include font-styling($darkBlue, 1.25rem, 800);
+        }
+
+        &__count {
+            @include font-styling($veryLightGrayish, 1rem, 800);
+
+            background-color: $blue;
+            border-radius: 8px;
+            padding: .375rem .75rem;
+        }
+    }
+
+    &__mark-all {
+        @include font-styling($darkGrayishBlue, .875rem, 500);
+        background: none;
+        border: none;
+
+        cursor: pointer;
+
+        padding: 0;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+}
