@@ -115,8 +115,7 @@ table {
   height: 40px;
 }
 .main .card__notification .notification__content {
-  display: flex;
-  flex-wrap: wrap;
+  line-height: 1.125rem;
 }
 .main .card__notification .notification__content__name {
   color: #1c202b;
@@ -155,9 +154,4 @@ body {
   font-size: 1rem;
   font-weight: 500;
   padding: 0 1rem;
-}
-@media screen and (min-width: 375px) {
-  body {
-    padding: 0 1.375rem;
-  }
 }/*# sourceMappingURL=base.css.map */

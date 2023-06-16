@@ -19,9 +19,8 @@
     
         .notification {
             &__content {
-                display: flex;
-                flex-wrap: wrap;
-
+                line-height: 1.125rem;
+                
                 &__name {
                     @include font-styling($darkBlue, .875rem, 800);
                 }

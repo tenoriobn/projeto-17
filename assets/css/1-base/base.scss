@@ -8,8 +8,4 @@ body {
     font-family: $plus;
     @include font-styling($grayishBlue, 1rem, 500);
     padding: 0 1rem;
-
-    @media screen and (min-width: 375px) {
-        padding: 0 1.375rem; 
-    }
 }
