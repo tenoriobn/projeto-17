@@ -1,0 +1,55 @@
+@import '../1-base/variaveis';
+
+.main {
+    margin-top: 2.5rem;
+    
+    .card__notification {
+        background-color: $veryLightGrayish;
+        border-radius: .625rem;
+        padding: 1rem 1rem 1rem 1rem;
+
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+
+        &__img {
+            width: 40px;
+            height: 40px;
+        }
+    
+        .notification {
+            &__content {
+                display: flex;
+                flex-wrap: wrap;
+
+                &__name {
+                    @include font-styling($darkBlue, .875rem, 800);
+                }
+        
+                &__action {
+                    @include font-styling($darkGrayishBlue, .875rem, 500);
+                }
+        
+                &__title {
+                    @include font-styling($darkGrayishBlue, .875rem, 800);
+                }
+        
+                &__icon {
+                    display: inline-block;
+                    background-color: $orangeRed;
+                    border-radius: 50%;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+
+            &__info {
+                margin-top: .375rem;
+
+                &__date {
+                    @include font-styling($lightBlueGray, .875rem, 500);
+                }
+            }
+        }
+    }
+}

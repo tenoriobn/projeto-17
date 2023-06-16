@@ -96,6 +96,59 @@ table {
   color: #0a317b;
 }
 
+/* Colors */
+/* Font */
+/* Mixins */
+.main {
+  margin-top: 2.5rem;
+}
+.main .card__notification {
+  background-color: #f7fafd;
+  border-radius: 0.625rem;
+  padding: 1rem 1rem 1rem 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.main .card__notification__img {
+  width: 40px;
+  height: 40px;
+}
+.main .card__notification .notification__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .card__notification .notification__content__name {
+  color: #1c202b;
+  font-size: 0.875rem;
+  font-weight: 800;
+}
+.main .card__notification .notification__content__action {
+  color: #666970;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.main .card__notification .notification__content__title {
+  color: #666970;
+  font-size: 0.875rem;
+  font-weight: 800;
+}
+.main .card__notification .notification__content__icon {
+  display: inline-block;
+  background-color: #f65351;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+.main .card__notification .notification__info {
+  margin-top: 0.375rem;
+}
+.main .card__notification .notification__info__date {
+  color: #a2a5ae;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   color: #787b82;
