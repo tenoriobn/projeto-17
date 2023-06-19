@@ -1,10 +1,14 @@
 @import '../1-base/variaveis';
 
 .main {
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+
     margin-top: 2.5rem;
+    margin-bottom: 2.75rem;
     
     .card__notification {
-        background-color: $veryLightGrayish;
         border-radius: .625rem;
         padding: 1rem 1rem 1rem 1rem;
 
@@ -27,10 +31,20 @@
         
                 &__action {
                     @include font-styling($darkGrayishBlue, .875rem, 500);
+                    margin-left: .25rem;
                 }
         
                 &__title {
-                    @include font-styling($darkGrayishBlue, .875rem, 800);
+                    @include font-styling('', .875rem, 800);
+                    margin-left: .25rem;
+
+                    &.post {
+                        color: $darkGrayishBlue;
+                    }
+
+                    &.club {
+                        color: $blueJeans;
+                    }
                 }
         
                 &__icon {
@@ -39,6 +53,7 @@
                     border-radius: 50%;
                     width: 10px;
                     height: 10px;
+                    margin-left: .25rem;
                 }
             }
 
@@ -49,6 +64,26 @@
                     @include font-styling($lightBlueGray, .875rem, 500);
                 }
             }
+
+            &__private {
+                border: 1px solid $whiteIce;
+                border-radius: 6px;
+                padding: 1.125rem 1rem;
+                margin-top: .75rem;
+
+                &__message {
+                    @include font-styling($grayishBlue, .875rem, 500);
+                    line-height: 1.125rem;
+                }
+            }
+        }
+
+        &.unread {
+            background-color: $veryLightGrayish;
+        }
+
+        &.read {
+            background-color: transparent;
         }
     }
 }
