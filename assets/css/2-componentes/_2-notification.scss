@@ -5,77 +5,102 @@
     flex-direction: column;
     gap: .625rem;
 
-    margin-top: 2.5rem;
+    padding: 2.5rem 1rem 0 1rem;
+
     margin-bottom: 2.75rem;
     
     .card__notification {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+
         border-radius: .625rem;
+
         padding: 1rem 1rem 1rem 1rem;
 
-        display: flex;
-        align-items: flex-start;
-        gap: 14px;
+        .div {
+            display: flex;
+            gap: 14px;
 
-        &__img {
+            .card__notification__img {
+                cursor: pointer;
+
+                width: 40px;
+                height: 40px;
+            }
+        
+            .notification {
+                &__content {
+                    line-height: 1.125rem;
+                    cursor: pointer;
+                    
+                    &__name {
+                        @include font-styling($darkBlue, .875rem, 800);
+
+                        &:hover {
+                            color: $blueJeans;
+                        }
+                    }
+            
+                    &__action {
+                        @include font-styling($darkGrayishBlue, .875rem, 500);
+                        margin-left: .25rem;
+                    }
+            
+                    &__title {
+                        @include font-styling('', .875rem, 800);
+                        margin-left: .25rem;
+                        color: $darkGrayishBlue;
+
+                        &:hover {
+                            color: $blueJeans;
+                        }
+                    }
+            
+                    &__icon {
+                        display: inline-block;
+                        background-color: $orangeRed;
+                        border-radius: 50%;
+                        width: 10px;
+                        height: 10px;
+                        margin-left: .25rem;
+                    }
+                }
+
+                &__info {
+                    margin-top: .375rem;
+
+                    &__date {
+                        @include font-styling($lightBlueGray, .875rem, 500);
+                        cursor: pointer;
+                    }
+                }
+
+                &__private {
+                    border: 1px solid $whiteIce;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    padding: 1.125rem 1rem;
+                    margin-top: .75rem;
+
+                    &:hover {
+                        background-color: $whiteHover;
+                    }
+
+                    &__message {
+                        @include font-styling($grayishBlue, .875rem, 500);
+                        line-height: 1.125rem;
+                    }
+                }
+            }
+        }
+
+        &__picture {
+            position: relative;
+            cursor: pointer;
+
             width: 40px;
             height: 40px;
-        }
-    
-        .notification {
-            &__content {
-                line-height: 1.125rem;
-                
-                &__name {
-                    @include font-styling($darkBlue, .875rem, 800);
-                }
-        
-                &__action {
-                    @include font-styling($darkGrayishBlue, .875rem, 500);
-                    margin-left: .25rem;
-                }
-        
-                &__title {
-                    @include font-styling('', .875rem, 800);
-                    margin-left: .25rem;
-
-                    &.post {
-                        color: $darkGrayishBlue;
-                    }
-
-                    &.club {
-                        color: $blueJeans;
-                    }
-                }
-        
-                &__icon {
-                    display: inline-block;
-                    background-color: $orangeRed;
-                    border-radius: 50%;
-                    width: 10px;
-                    height: 10px;
-                    margin-left: .25rem;
-                }
-            }
-
-            &__info {
-                margin-top: .375rem;
-
-                &__date {
-                    @include font-styling($lightBlueGray, .875rem, 500);
-                }
-            }
-
-            &__private {
-                border: 1px solid $whiteIce;
-                border-radius: 6px;
-                padding: 1.125rem 1rem;
-                margin-top: .75rem;
-
-                &__message {
-                    @include font-styling($grayishBlue, .875rem, 500);
-                    line-height: 1.125rem;
-                }
-            }
         }
 
         &.unread {
@@ -84,6 +109,65 @@
 
         &.read {
             background-color: transparent;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        background-color: $white;
+        border-radius: 0 0 .875rem .875rem;
+        gap: .5rem;
+
+        padding: 2rem 2rem 0rem 2rem;
+
+        margin-bottom: 0;
+
+        .card__notification {
+            gap: 1.25rem;
+    
+            padding: 1.125rem 1.25rem;
+    
+            .div {
+
+                &__img {
+                    width: 46px;
+                    height: 46px;
+                }
+            
+                .notification {
+                    &__content {     
+                        line-height: 1.375rem;
+
+                        &__name {
+                            @include font-styling('', 1rem, '');
+                        }
+                
+                        &__action {
+                            @include font-styling('', 1rem, '');
+                        }
+                
+                        &__title {
+                            @include font-styling('', 1rem, '');
+                        }
+                    }
+        
+                    &__info {
+                        &__date {
+                            @include font-styling('', 1rem, '');
+                        }
+                    }
+        
+                    &__private {
+                        padding: 1.25rem;
+        
+                        &__message {
+                            @include font-styling('', 1rem, '');
+                            line-height: 1.375rem;
+                        }
+                    }
+                }
+            }
         }
     }
 }
