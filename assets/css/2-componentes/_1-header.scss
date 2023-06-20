@@ -26,7 +26,7 @@
     }
 
     &__mark-all {
-        @include font-styling($darkGrayishBlue, .875rem, 500);
+        @include font-styling($grayishBlue, .875rem, 600);
         background: none;
         border: none;
 

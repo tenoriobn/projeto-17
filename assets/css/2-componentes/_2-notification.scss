@@ -18,7 +18,7 @@
 
         padding: 1rem 1rem 1rem 1rem;
 
-        .div {
+        .notification__container {
             display: flex;
             gap: 14px;
 
@@ -128,9 +128,9 @@
     
             padding: 1.125rem 1.25rem;
     
-            .div {
+            .notification__container {
 
-                &__img {
+                .card__notification__img {
                     width: 46px;
                     height: 46px;
                 }
