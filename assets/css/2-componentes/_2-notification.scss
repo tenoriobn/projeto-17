@@ -1,6 +1,9 @@
 @import '../1-base/variaveis';
 
 .main {
+    border: 1px solid $lightGrayish;
+    border-top: none;
+
     display: flex;
     flex-direction: column;
     gap: .625rem;

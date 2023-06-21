@@ -1,9 +1,12 @@
 const markAllAsRead = document.querySelector(".header__mark-all");
+const notificationsCount = document.querySelector(".header__notifications__count");
 
 let allRead = false;
 
 markAllAsRead.addEventListener("click", () => {
     const articles = document.querySelectorAll("article");
+    const unreadArticles = document.querySelectorAll(".read");
+    const unreadCount = unreadArticles.length;
 
     if (!allRead) {
         articles.forEach((article) => {
@@ -16,6 +19,8 @@ markAllAsRead.addEventListener("click", () => {
                 notificationIcons.forEach((icon) => {
                     icon.style.display = "none";
                 });
+
+                notificationsCount.style.display = "none";
             }
         });
 
@@ -27,6 +32,9 @@ markAllAsRead.addEventListener("click", () => {
             if(article.classList.contains("read")) {
                 article.classList.remove("read");
                 article.classList.add("unread");
+
+                notificationsCount.style.display = "inline-block";
+                notificationsCount.textContent = unreadCount;
             }
         });
 

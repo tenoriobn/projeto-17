@@ -1,6 +1,9 @@
 @import '../1-base/variaveis';
 
 .header {
+    border: 1px solid $lightGrayish;
+    border-bottom: none;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,6 +17,7 @@
 
         &__title {
             @include font-styling($darkBlue, 1.25rem, 800);
+            cursor: pointer;
         }
 
         &__count {
@@ -21,6 +25,7 @@
 
             background-color: $blue;
             border-radius: 8px;
+            cursor: pointer;
             padding: .375rem .75rem;
         }
     }

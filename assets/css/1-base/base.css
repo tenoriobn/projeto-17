@@ -60,6 +60,8 @@ table {
 /* Font */
 /* Mixins */
 .header {
+  border: 1px solid #F8F8FA;
+  border-bottom: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -74,6 +76,7 @@ table {
   color: #1c202b;
   font-size: 1.25rem;
   font-weight: 800;
+  cursor: pointer;
 }
 .header__notifications__count {
   color: #f7fafd;
@@ -81,6 +84,7 @@ table {
   font-weight: 800;
   background-color: #0a317b;
   border-radius: 8px;
+  cursor: pointer;
   padding: 0.375rem 0.75rem;
 }
 .header__mark-all {
@@ -120,6 +124,8 @@ table {
 /* Font */
 /* Mixins */
 .main {
+  border: 1px solid #F8F8FA;
+  border-top: none;
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
